@@ -23,7 +23,7 @@ export default createGlobalStyle`
     .App{
         height: 100vh;
         display: grid;
-        grid-template-rows: 2fr 8fr;
+        grid-template-rows: 1.5fr 8.5fr;
         grid-template-areas: 'header'
                              'main';
     }
