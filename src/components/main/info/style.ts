@@ -1,11 +1,10 @@
 import styled from "styled-components";
 export const Info = styled.div`
-    display: grid;
-    grid-template-areas: 'vacancy'
-                         'position'
-                         'details';
+    
+    display: flex;
+    flex-direction: column;
 
     gap: 0.5rem;
     
-    align-items: center;
+    justify-content: center;
 `

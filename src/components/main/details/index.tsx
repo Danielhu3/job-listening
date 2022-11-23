@@ -1,11 +1,12 @@
 import React from 'react'
-import { Info } from './style'
+import { Details } from './style'
+
 type Props = {
     children: JSX.Element[];
 }
-const index = ({children}: Props) => {
+const index = ({children}:Props) => {
   return (
-    <Info>{children}</Info>
+    <Details>{children}</Details>
   )
 }
 

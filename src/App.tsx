@@ -2,9 +2,12 @@ import React from 'react';
 import Header  from './components/header/';
 import  Main  from './components/main/';
 import  Card  from './components/main/card/';
+import  Details  from './components/main/details/';
+import DetailsItem  from './components/main/detailsItem/';
 import  Icon  from './components/main/icon/';
 import  IconImage  from './components/main/iconImage/';
 import  Info  from './components/main/info/';
+import  Position  from './components/main/position/';
 import  Vacancy  from './components/main/vacancy/';
 import  VacancyCompany  from './components/main/vacancyCompany/';
 import  VacancyLabel  from './components/main/vacancyLabel/';
@@ -27,6 +30,16 @@ function App() {
               <VacancyCompany></VacancyCompany>
               <VacancyLabel></VacancyLabel>
             </Vacancy>
+
+            <Position></Position>
+
+            <Details>
+              <DetailsItem></DetailsItem>
+              <DetailsItem></DetailsItem>
+            </Details>
+
+
+
           </Info>
           
         </Card>

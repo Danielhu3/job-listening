@@ -8,5 +8,7 @@ export const Card = styled.div`
     grid-template-columns: 1fr 3fr 4fr;
     grid-template-areas: 'icon info labels';
 
+    gap: 2rem;
+
     // try remove height after done
 `
