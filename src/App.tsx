@@ -4,6 +4,10 @@ import  Main  from './components/main/';
 import  Card  from './components/main/card/';
 import  Icon  from './components/main/icon/';
 import  IconImage  from './components/main/iconImage/';
+import  Info  from './components/main/info/';
+import  Vacancy  from './components/main/vacancy/';
+import  VacancyCompany  from './components/main/vacancyCompany/';
+import  VacancyLabel  from './components/main/vacancyLabel/';
 import GlobalStyles from './styles/global';
 
 function App() {
@@ -13,9 +17,18 @@ function App() {
       <Header></Header>
       <Main>
         <Card>
+
           <Icon>
             <IconImage />
           </Icon>
+
+          <Info>
+            <Vacancy>
+              <VacancyCompany></VacancyCompany>
+              <VacancyLabel></VacancyLabel>
+            </Vacancy>
+          </Info>
+          
         </Card>
         
       </Main>
@@ -42,12 +55,13 @@ labels
 info Rows:
   Vacancy
     VacancyCompany
-    VacancyLabels
-  VacancyTitle
+    VacancyNew      }
+    VacancyFeatured } VacancyLabel
+  Position
   Details
-    Date
-    Time(?)
-    Local(?)
+    PostedAt }
+    Contract } DetailsItem
+    Location }
 
 
 */
