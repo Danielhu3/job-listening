@@ -26,6 +26,9 @@ export default createGlobalStyle`
         grid-template-rows: 1.5fr 8.5fr;
         grid-template-areas: 'header'
                              'main';
+        gap: 6rem;
+
+        background-color: hsl(180, 52%, 96%);
     }
 
 
