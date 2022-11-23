@@ -2,7 +2,7 @@ import React from 'react'
 import { Main } from './style'
 
 type Props = {
-  children: JSX.Element[];
+  children: JSX.Element;
 }
 const index = ({children}: Props) => {
   return (

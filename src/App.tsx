@@ -11,14 +11,7 @@ function App() {
     <div className="App">
       <GlobalStyles />   
       <Header></Header>
-
       <Main>
-        <Card>
-          <Icon>
-            <IconImage />
-          </Icon>
-        </Card>
-
         <Card>
           <Icon>
             <IconImage />
@@ -41,6 +34,20 @@ export default App;
 icon
 info
 labels
+
+
+*/
+
+/* 
+info Rows:
+  Vacancy
+    VacancyCompany
+    VacancyLabels
+  VacancyTitle
+  Details
+    Date
+    Time(?)
+    Local(?)
 
 
 */
