@@ -2,6 +2,8 @@ import React from 'react';
 import Header  from './components/header/';
 import  Main  from './components/main/';
 import  Card  from './components/main/card/';
+import  Icon  from './components/main/icon/';
+import  IconImage  from './components/main/iconImage/';
 import GlobalStyles from './styles/global';
 
 function App() {
@@ -11,8 +13,18 @@ function App() {
       <Header></Header>
 
       <Main>
-        <Card />
-        <Card />
+        <Card>
+          <Icon>
+            <IconImage />
+          </Icon>
+        </Card>
+
+        <Card>
+          <Icon>
+            <IconImage />
+          </Icon>
+        </Card>
+        
       </Main>
     </div>
   );
