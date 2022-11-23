@@ -5,5 +5,6 @@ export const Main = styled.main`
     background-color: red;
 
     display: flex;
+    flex-direction: column;
     gap: 2rem;
 `
