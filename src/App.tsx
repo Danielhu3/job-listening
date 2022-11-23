@@ -7,6 +7,8 @@ import DetailsItem  from './components/main/detailsItem/';
 import  Icon  from './components/main/icon/';
 import  IconImage  from './components/main/iconImage/';
 import  Info  from './components/main/info/';
+import  Labels  from './components/main/labels/';
+import  LabelsItem  from './components/main/labelsItem/';
 import  Position  from './components/main/position/';
 import  Vacancy  from './components/main/vacancy/';
 import  VacancyCompany  from './components/main/vacancyCompany/';
@@ -37,10 +39,12 @@ function App() {
               <DetailsItem></DetailsItem>
               <DetailsItem></DetailsItem>
             </Details>
-
-
-
           </Info>
+
+          <Labels>
+            <LabelsItem></LabelsItem>
+            <LabelsItem></LabelsItem>
+          </Labels>
           
         </Card>
         
