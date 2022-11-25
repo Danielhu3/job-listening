@@ -36,7 +36,7 @@ function App() {
 
             <Info>
               <Vacancy>
-                <VacancyCompany></VacancyCompany>
+                <VacancyCompany company ={item.company} />
                 <VacancyLabel></VacancyLabel>
               </Vacancy>
 

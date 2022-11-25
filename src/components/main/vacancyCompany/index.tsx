@@ -1,9 +1,12 @@
 import React from 'react'
 import { VacancyCompany } from './style'
 
-const index = () => {
+type Props = {
+  company:string;
+}
+const index = ({company}:Props) => {
   return (
-    <VacancyCompany>Photosnap</VacancyCompany>
+    <VacancyCompany>{company}</VacancyCompany>
   )
 }
 
