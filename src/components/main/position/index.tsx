@@ -1,9 +1,12 @@
 import React from 'react'
 import { Position } from './style'
 
-const index = () => {
+type Props = {
+  position: string;
+}
+const index = ({position}: Props) => {
   return (
-    <Position>Senior Frontend Developer</Position>
+    <Position>{position}</Position>
   )
 }
 

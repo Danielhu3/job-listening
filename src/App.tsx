@@ -46,7 +46,7 @@ function App() {
                 }
               </Vacancy>
 
-              <Position></Position>
+              <Position position={item.position} />
 
               <Details>
                 <DetailsItem></DetailsItem>
