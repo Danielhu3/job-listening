@@ -21,9 +21,9 @@ export default createGlobalStyle`
     }
 
     .App{
-        height: 100vh;
+        min-height: 100vh;
         display: grid;
-        grid-template-rows: 1.5fr 8.5fr;
+        grid-template-rows: 1fr 9fr;
         grid-template-areas: 'header'
                              'main';
         gap: 6rem;

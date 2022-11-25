@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import bgDesktop from '../../images/bg-header-desktop.svg';
-//import bgMobile from '../../images/bg-header-mobile.svg';
+import bgDesktop from '../../moduleImages/bg-header-desktop.svg';
 export const Header = styled.header`
     grid-area: header;
     background-image: url(${bgDesktop});
