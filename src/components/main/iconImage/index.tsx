@@ -1,10 +1,12 @@
 import React from 'react'
 import { IconImage } from './style'
-import iconImage from '../../../images/photosnap.svg'
 
-const index = () => {
+type Props = {
+  logo: string;
+}
+const index = ({logo}: Props) => {
   return (
-    <IconImage src={iconImage}></IconImage>
+    <IconImage src={String(logo)}></IconImage>
   )
 }
 

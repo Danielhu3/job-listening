@@ -31,7 +31,7 @@ function App() {
           filteredData ? filteredData.map((item)=>
           <Card key={item.id}>
             <Icon>
-              <IconImage />
+              <IconImage logo={item.logo}/>
             </Icon>
 
             <Info>
