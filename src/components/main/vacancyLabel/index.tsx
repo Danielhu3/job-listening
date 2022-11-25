@@ -1,9 +1,12 @@
 import React from 'react'
 import { VacancyLabel } from './style'
 
-const index = () => {
+type Props = {
+  labelType:string;
+}
+const index = ({labelType}:Props) => {
   return (
-    <VacancyLabel>NEW!</VacancyLabel>
+    <VacancyLabel labelType={labelType}>{labelType.toUpperCase()}</VacancyLabel>
   )
 }
 

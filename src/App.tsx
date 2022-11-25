@@ -37,7 +37,13 @@ function App() {
             <Info>
               <Vacancy>
                 <VacancyCompany company ={item.company} />
-                <VacancyLabel></VacancyLabel>
+                {
+                  item.new ? <VacancyLabel labelType='new!'></VacancyLabel> : <></> 
+                }
+
+                {
+                  item.featured ? <VacancyLabel labelType='featured'></VacancyLabel> : <></> 
+                }
               </Vacancy>
 
               <Position></Position>
