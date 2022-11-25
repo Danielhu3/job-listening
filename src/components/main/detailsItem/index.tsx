@@ -1,9 +1,12 @@
 import React from 'react'
 import { DetailsItem } from './style'
 
-const index = () => {
+type Props = {
+  detailsItemText: string;
+}
+const index = ({detailsItemText}: Props) => {
   return (
-    <DetailsItem>test</DetailsItem>
+    <DetailsItem>{detailsItemText}</DetailsItem>
   )
 }
 

@@ -49,8 +49,16 @@ function App() {
               <Position position={item.position} />
 
               <Details>
-                <DetailsItem></DetailsItem>
-                <DetailsItem></DetailsItem>
+                {
+                  item.postedAt ? <DetailsItem detailsItemText={item.postedAt}/> : <></>
+                }
+                {
+                  item.contract ? <DetailsItem detailsItemText={item.contract}/> : <></>
+                }
+                {
+                  item.location ? <DetailsItem detailsItemText={item.location}/> : <></>
+                }
+
               </Details>
             </Info>
 
