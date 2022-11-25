@@ -50,14 +50,15 @@ function App() {
 
               <Details>
                 {
-                  item.postedAt ? <DetailsItem detailsItemText={item.postedAt}/> : <></>
+                  item ?
+                  <>
+                    <DetailsItem detailsItemText={item.postedAt}/>
+                    <DetailsItem detailsItemText={item.contract}/>
+                    <DetailsItem detailsItemText={item.location}/>
+                  </> 
+                  : <></>
                 }
-                {
-                  item.contract ? <DetailsItem detailsItemText={item.contract}/> : <></>
-                }
-                {
-                  item.location ? <DetailsItem detailsItemText={item.location}/> : <></>
-                }
+                
 
               </Details>
             </Info>
