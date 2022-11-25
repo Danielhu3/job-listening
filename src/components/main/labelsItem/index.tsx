@@ -1,9 +1,12 @@
 import React from 'react'
 import { LabelsItem } from './style'
 
-const index = () => {
+type Props = {
+  labelsItemText: string;
+}
+const index = ({labelsItemText}:Props) => {
   return (
-    <LabelsItem>React</LabelsItem>
+    <LabelsItem>{labelsItemText}</LabelsItem>
   )
 }
 

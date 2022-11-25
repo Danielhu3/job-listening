@@ -61,10 +61,22 @@ function App() {
 
               </Details>
             </Info>
-
+                
             <Labels>
-              <LabelsItem></LabelsItem>
-              <LabelsItem></LabelsItem>
+              {
+                item? 
+                <>
+                  <LabelsItem labelsItemText={item.role} />
+                  <LabelsItem labelsItemText={item.level} />
+                  {
+                    item.languages.map((language)=> <LabelsItem labelsItemText={language} />)
+                  }
+                  {
+                    item.tools.map((tools)=> <LabelsItem labelsItemText={tools} />)
+                  }
+                </>: <></>
+              }
+              
             </Labels>
           </Card>)
           
@@ -76,7 +88,7 @@ function App() {
 }
 
 export default App;
-
+// role > level > languages > tools}
 /* 
   static components:
 
