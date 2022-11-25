@@ -15,13 +15,58 @@ import  VacancyCompany  from './components/main/vacancyCompany/';
 import  VacancyLabel  from './components/main/vacancyLabel/';
 import GlobalStyles from './styles/global';
 
+import Data from './data.json';
+
 function App() {
+  const [data,setData] = React.useState(Data);
+  const [filteredData, setFilteredData] = React.useState(Data);
+  const [filters, setFilters] = React.useState([]);
+  console.log(data)
   return (
     <div className="App">
       <GlobalStyles />   
       <Header></Header>
       <Main>
-        <Card>
+        {
+          filteredData ? filteredData.map((item)=>
+          <Card key={item.id}>
+            <Icon>
+              <IconImage />
+            </Icon>
+
+            <Info>
+              <Vacancy>
+                <VacancyCompany></VacancyCompany>
+                <VacancyLabel></VacancyLabel>
+              </Vacancy>
+
+              <Position></Position>
+
+              <Details>
+                <DetailsItem></DetailsItem>
+                <DetailsItem></DetailsItem>
+              </Details>
+            </Info>
+
+            <Labels>
+              <LabelsItem></LabelsItem>
+              <LabelsItem></LabelsItem>
+            </Labels>
+          </Card>)
+          
+          : undefined
+        }
+      </Main>
+    </div>
+  );
+}
+
+export default App;
+
+/* 
+  static components:
+
+  <Card>
 
           <Icon>
             <IconImage />
@@ -47,13 +92,8 @@ function App() {
           </Labels>
           
         </Card>
-        
-      </Main>
-    </div>
-  );
-}
 
-export default App;
+*/
 
 // featured items got line on left and be on top of the list
 
