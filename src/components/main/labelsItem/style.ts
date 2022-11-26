@@ -8,4 +8,9 @@ export const LabelsItem = styled.button`
 
     border: none;
     cursor: pointer;
+
+    &:hover{
+        background-color: hsl(180,29%,50%);
+        color: white
+    }
 `
