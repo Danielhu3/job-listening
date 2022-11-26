@@ -1,12 +1,12 @@
 import React from 'react'
-import { Header } from './style'
+import { FilterItem } from './style'
 
 type Props = {
-  children: JSX.Element
+    children?: JSX.Element[];
 }
 const index = ({children}:Props) => {
   return (
-    <Header>{children}</Header>
+    <FilterItem>{children}</FilterItem>
   )
 }
 

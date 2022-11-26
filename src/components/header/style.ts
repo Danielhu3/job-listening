@@ -6,4 +6,9 @@ export const Header = styled.header`
     background-repeat: no-repeat;
     background-size: cover;
     background-color: hsl(180, 29%, 50%);
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
     `

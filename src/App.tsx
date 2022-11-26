@@ -1,9 +1,9 @@
-import React from 'react';
-import Header  from './components/header/';
+import  React from 'react';
+import  Header  from './components/header/';
 import  Main  from './components/main/';
 import  Card  from './components/main/card/';
 import  Details  from './components/main/details/';
-import DetailsItem  from './components/main/detailsItem/';
+import  DetailsItem  from './components/main/detailsItem/';
 import  Icon  from './components/main/icon/';
 import  IconImage  from './components/main/iconImage/';
 import  Info  from './components/main/info/';
@@ -13,19 +13,39 @@ import  Position  from './components/main/position/';
 import  Vacancy  from './components/main/vacancy/';
 import  VacancyCompany  from './components/main/vacancyCompany/';
 import  VacancyLabel  from './components/main/vacancyLabel/';
-import GlobalStyles from './styles/global';
+import  FilterBar  from './components/header/filterBar/';
+import  FilterItem  from './components/header/filterItem/';
+import  FilterItemText from './components/header/filterItemText/';
+import  FilterItemButton  from './components/header/filterItemButton/';
 
+import GlobalStyles from './styles/global';
 import Data from './data.json';
+
 
 function App() {
   const [data,setData] = React.useState(Data);
   const [filteredData, setFilteredData] = React.useState(Data);
-  const [filters, setFilters] = React.useState([]);
-  console.log(data)
+  const [filters, setFilters] = React.useState(['React', 'CSS']);
+ 
   return (
     <div className="App">
       <GlobalStyles />   
-      <Header></Header>
+      <Header>
+        <FilterBar>
+          {
+            filters.length > 0 ? 
+            filters.map((item, index)=> 
+            <FilterItem key={index}>
+              <FilterItemText filterItemText={item} />
+              <FilterItemButton />
+            </FilterItem> )
+            
+            
+            : <></>
+
+          }
+        </FilterBar>
+      </Header>
       <Main>
         {
           filteredData ? filteredData.map((item)=>
@@ -70,10 +90,10 @@ function App() {
                   <LabelsItem labelsItemText={item.role} />
                   <LabelsItem labelsItemText={item.level} />
                   {
-                    item.languages.map((language)=> <LabelsItem labelsItemText={language} />)
+                    item.languages.map((language)=> <LabelsItem labelsItemText={language} key={language} />)
                   }
                   {
-                    item.tools.map((tools)=> <LabelsItem labelsItemText={tools} />)
+                    item.tools.map((tools)=> <LabelsItem labelsItemText={tools} key={tools}/>)
                   }
                 </>: <></>
               }
@@ -89,40 +109,7 @@ function App() {
 }
 
 export default App;
-// role > level > languages > tools}
-/* 
-  static components:
 
-  <Card>
-
-          <Icon>
-            <IconImage />
-          </Icon>
-
-          <Info>
-            <Vacancy>
-              <VacancyCompany></VacancyCompany>
-              <VacancyLabel></VacancyLabel>
-            </Vacancy>
-
-            <Position></Position>
-
-            <Details>
-              <DetailsItem></DetailsItem>
-              <DetailsItem></DetailsItem>
-            </Details>
-          </Info>
-
-          <Labels>
-            <LabelsItem></LabelsItem>
-            <LabelsItem></LabelsItem>
-          </Labels>
-          
-        </Card>
-
-*/
-
-// featured items got line on left and be on top of the list
 
 // in mobile card grid columns will be turn into rows
 
