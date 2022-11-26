@@ -13,6 +13,9 @@ export const FilterBar = styled.div.attrs((props: {filters: Array<string>}) => p
     gap: 0.5rem;
 
     display: ${(props)=> props.filters.length === 0 && 'none'};
-    
+
+    border-radius: 0.5rem;
+    box-shadow: 0px 10px 15px -7px hsla(180,29%,50%,0.5);
+
 
 `
