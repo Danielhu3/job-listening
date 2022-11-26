@@ -6,6 +6,11 @@ export const FilterBar = styled.div`
 
     position: absolute;
     top: 12rem;
+
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 0.5rem;
     
 
 `
