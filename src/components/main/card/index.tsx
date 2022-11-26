@@ -2,11 +2,12 @@ import React from 'react'
 import { Card } from './style'
 
 type Props = {
-  children?: JSX.Element[]
+  children?: JSX.Element[];
+  isFeatured: boolean;
 }
-const index = ({children}: Props) => {
+const index = ({children, isFeatured}: Props) => {
   return (
-    <Card>{children}</Card>
+    <Card isFeatured={isFeatured}>{children}</Card>
   )
 }
 

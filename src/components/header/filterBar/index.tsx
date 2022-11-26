@@ -6,7 +6,6 @@ type Props = {
     filters: Array<string>;
 }
 const index = ({children, filters}: Props) => {
-  console.log(filters.length)
   return (
     <FilterBar filters={filters}>{children}</FilterBar>
   )

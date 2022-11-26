@@ -18,8 +18,10 @@ import  FilterItem  from './components/header/filterItem/';
 import  FilterItemText from './components/header/filterItemText/';
 import  FilterItemButton  from './components/header/filterItemButton/';
 
+
 import GlobalStyles from './styles/global';
 import Data from './data.json';
+
 
 
 function App() {
@@ -49,7 +51,8 @@ function App() {
       <Main>
         {
           filteredData ? filteredData.map((item)=>
-          <Card key={item.id}>
+          <Card key={item.id} isFeatured={item.featured}>
+           
             <Icon>
               <IconImage logo={item.logo}/>
             </Icon>
