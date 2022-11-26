@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       <GlobalStyles />   
       <Header>
-        <FilterBar>
+        <FilterBar filters={filters}>
           {
             filters.length > 0 ? 
             filters.map((item, index)=> 

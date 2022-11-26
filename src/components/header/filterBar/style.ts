@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const FilterBar = styled.div`
+export const FilterBar = styled.div.attrs((props: {filters: Array<string>}) => props)`
     width: 80%;
     height: 6rem;
     background: white;
@@ -11,6 +11,8 @@ export const FilterBar = styled.div`
     align-items: center;
     padding: 2rem;
     gap: 0.5rem;
+
+    display: ${(props)=> props.filters.length === 0 && 'none'};
     
 
 `
