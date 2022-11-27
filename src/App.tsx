@@ -39,7 +39,7 @@ function App() {
             filters.map((item, index)=> 
             <FilterItem key={index}>
               <FilterItemText filterItemText={item} />
-              <FilterItemButton />
+              <FilterItemButton setFilters={setFilters} filterItemText={item}/>
             </FilterItem> )
             
             
