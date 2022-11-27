@@ -30,8 +30,51 @@ function App() {
   const [data,setData] = React.useState(Data);
   const [filteredData, setFilteredData] = React.useState(Data);
   const [filters, setFilters] =  React.useState<string[]>([]);
+
   
-  console.log(filters.length)
+  React.useEffect(()=>{
+    filters.length > 0 ? 
+      setFilteredData(Data.filter(function(item){
+
+
+        function findCommomElements(arr1:Array<string>, arr2:Array<string>){
+         let localCount = 0; 
+          for(let i = 0; i<arr1.length; i++){
+            for(let j = 0; j<arr2.length; j++){
+              if(arr1[i] === arr2[j]){
+                localCount++
+              }
+            }
+          }
+      return localCount
+    }
+
+        let count = 0
+  
+        if(filters.includes(item.role)){
+          count++;
+        }
+
+        if(filters.includes(item.level)){
+          count++
+        }
+
+        count += findCommomElements(filters,item.languages)
+        count +=findCommomElements(filters,item.tools)
+       
+        if(count === filters.length){
+          return item
+        }
+        
+      }))
+
+    
+    : setFilteredData(Data);
+  },[filters])
+
+
+ 
+  
   return (
     <div className="App">
       <GlobalStyles />   
