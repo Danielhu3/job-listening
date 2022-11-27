@@ -27,7 +27,7 @@ import Data from './data.json';
 function App() {
   const [data,setData] = React.useState(Data);
   const [filteredData, setFilteredData] = React.useState(Data);
-  const [filters, setFilters] = React.useState(['React', 'CSS']);
+  const [filters, setFilters] =  React.useState<string[]>([]);
  
   return (
     <div className="App">
@@ -90,13 +90,13 @@ function App() {
               {
                 item? 
                 <>
-                  <LabelsItem labelsItemText={item.role} />
-                  <LabelsItem labelsItemText={item.level} />
+                  <LabelsItem labelsItemText={item.role} setFilters={setFilters} />
+                  <LabelsItem labelsItemText={item.level} setFilters={setFilters}/>
                   {
-                    item.languages.map((language)=> <LabelsItem labelsItemText={language} key={language} />)
+                    item.languages.map((language)=> <LabelsItem labelsItemText={language} key={language} setFilters={setFilters}/>)
                   }
                   {
-                    item.tools.map((tools)=> <LabelsItem labelsItemText={tools} key={tools}/>)
+                    item.tools.map((tools)=> <LabelsItem labelsItemText={tools} key={tools} setFilters={setFilters}/>)
                   }
                 </>: <></>
               }
@@ -113,32 +113,9 @@ function App() {
 
 export default App;
 
-
+// media query in 900px
 // in mobile card grid columns will be turn into rows
 
-/* columns:
-
-icon
-info
-labels
-
-
-*/
-
-/* 
-info Rows:
-  Vacancy
-    VacancyCompany
-    VacancyNew      }
-    VacancyFeatured } VacancyLabel
-  Position
-  Details
-    PostedAt }
-    Contract } DetailsItem
-    Location }
-
-
-*/
 
 /*
 mobile version:

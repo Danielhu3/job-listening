@@ -3,10 +3,17 @@ import { LabelsItem } from './style'
 
 type Props = {
   labelsItemText: string;
+  setFilters: React.Dispatch<React.SetStateAction<string[]>>;
 }
-const index = ({labelsItemText}:Props) => {
+
+const index = ({labelsItemText, setFilters}:Props) => {
+
+  function addFilter(){
+    setFilters((items)=> items.includes(labelsItemText) ? items :  [...items,labelsItemText])
+  
+  }
   return (
-    <LabelsItem>{labelsItemText}</LabelsItem>
+    <LabelsItem onClick={()=>addFilter()}>{labelsItemText}</LabelsItem>
   )
 }
 
