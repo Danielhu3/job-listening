@@ -17,10 +17,12 @@ import  FilterBar  from './components/header/filterBar/';
 import  FilterItem  from './components/header/filterItem/';
 import  FilterItemText from './components/header/filterItemText/';
 import  FilterItemButton  from './components/header/filterItemButton/';
-
+import  Filters  from './components/header/filters/';
+import  ClearFilters  from './components/header/clearFilters/';
 
 import GlobalStyles from './styles/global';
 import Data from './data.json';
+
 
 
 
@@ -34,6 +36,7 @@ function App() {
       <GlobalStyles />   
       <Header>
         <FilterBar filters={filters}>
+          <Filters>
           {
             filters.length > 0 ? 
             filters.map((item, index)=> 
@@ -46,6 +49,8 @@ function App() {
             : <></>
 
           }
+          </Filters>
+          <ClearFilters />
         </FilterBar>
       </Header>
       <Main>
