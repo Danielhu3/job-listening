@@ -1,9 +1,15 @@
 import React from 'react'
 import { ClearFilters } from './style'
 
-const index = () => {
+type Props = {
+  setFilters: React.Dispatch<React.SetStateAction<string[]>>;
+}
+const index = ({setFilters}:Props) => {
+  function clearFilters(){
+    setFilters([])
+  }
   return (
-    <ClearFilters>Clear</ClearFilters>
+    <ClearFilters onClick={()=>clearFilters()}>Clear</ClearFilters>
   )
 }
 

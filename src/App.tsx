@@ -50,7 +50,7 @@ function App() {
 
           }
           </Filters>
-          <ClearFilters />
+          <ClearFilters setFilters={setFilters}/>
         </FilterBar>
       </Header>
       <Main>
