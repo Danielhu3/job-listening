@@ -8,14 +8,12 @@ export const FilterBar = styled.div.attrs((props: {filters: Array<string>}) => p
     top: 12rem;
 
 
-    display: ${(props)=> props.filters.length === 0 && 'none'};
-
     border-radius: 0.5rem;
     box-shadow: 0px 10px 15px -7px hsla(180,29%,50%,0.5);
 
     padding: 2rem;
 
-    display: flex;
+    display: ${(props)=> props.filters.length === 0 ? 'none' : 'flex'};
     align-items: center;
     justify-content: space-between;
 

@@ -30,7 +30,8 @@ function App() {
   const [data,setData] = React.useState(Data);
   const [filteredData, setFilteredData] = React.useState(Data);
   const [filters, setFilters] =  React.useState<string[]>([]);
- 
+  
+  console.log(filters.length)
   return (
     <div className="App">
       <GlobalStyles />   
