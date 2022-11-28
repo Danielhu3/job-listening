@@ -23,11 +23,7 @@ import  ClearFilters  from './components/header/clearFilters/';
 import GlobalStyles from './styles/global';
 import Data from './data.json';
 
-
-
-
 function App() {
-  const [data,setData] = React.useState(Data);
   const [filteredData, setFilteredData] = React.useState(Data);
   const [filters, setFilters] =  React.useState<string[]>([]);
 
