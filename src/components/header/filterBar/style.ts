@@ -5,7 +5,7 @@ export const FilterBar = styled.div.attrs((props: {filters: Array<string>}) => p
     background: white;
 
     position: absolute;
-    top: 4rem;
+    top: 12rem;
 
 
     border-radius: 0.5rem;
