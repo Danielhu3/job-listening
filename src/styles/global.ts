@@ -29,6 +29,7 @@ export default createGlobalStyle`
         gap: 6rem;
 
         background-color: hsl(180, 52%, 96%);
+
     }
 
 

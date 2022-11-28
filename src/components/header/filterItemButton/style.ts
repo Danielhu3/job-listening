@@ -10,6 +10,8 @@ export const FilterItemButton = styled.button`
 
     padding: 1rem 1.5rem;
 
+    transition: all .5s ease-in-out;
+
     &:hover{
         background-color: hsl(180,14%,20%);
     }

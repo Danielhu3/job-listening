@@ -61,6 +61,7 @@ function App() {
         if(count === filters.length){
           return item
         }
+        return 0
         
       }))
 

@@ -5,6 +5,7 @@ export const Position = styled.h2`
     font-size: 1.2em;
 
     cursor:pointer;
+    transition: all .5s ease-in-out;
 
     &:hover{
         color: hsl(180,29%,50%);
