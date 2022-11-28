@@ -8,4 +8,9 @@ export const Details = styled.ul`
     & :first-child{
        list-style: none;
     }
+
+    @media screen and (max-width:900px){
+        border-bottom: 1px solid hsl(180,8%,52%);
+        padding-bottom: 1rem;
+    }
 `

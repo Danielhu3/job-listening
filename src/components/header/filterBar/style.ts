@@ -17,4 +17,9 @@ export const FilterBar = styled.div.attrs((props: {filters: Array<string>}) => p
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width:900px){
+        height: 10rem;
+        top: 9rem;
+    }
+
 `

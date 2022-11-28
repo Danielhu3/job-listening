@@ -13,7 +13,17 @@ export const Card = styled.div.attrs((props: {isFeatured:boolean}) => props)`
     border-radius: 0.5rem;
     box-shadow: 0px 10px 15px -7px hsla(180,29%,50%,0.5);
 
-    border-left:${(props)=> props.isFeatured ? '5px solid hsl(180, 29%, 50%);': 'none'}
+    border-left:${(props)=> props.isFeatured ? '5px solid hsl(180, 29%, 50%);': 'none'};
+
+    @media screen and (max-width:900px){
+        grid-template-areas: 'icon'
+                             'info'
+                             'labels';
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-columns: none;
+
+        height: 20rem;
+    }
 
 
 `

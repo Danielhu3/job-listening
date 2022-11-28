@@ -8,4 +8,9 @@ export const Main = styled.main`
     gap: 2rem;
 
     margin-bottom: 2rem;
+
+    @media screen and (max-width:900px){
+        margin-top: 4rem;
+        gap: 8rem;
+    }
 `

@@ -4,4 +4,9 @@ export const Labels = styled.div`
     justify-self: end;
     display: flex;
     gap: 1rem;
+
+    @media screen and (max-width:900px){
+        justify-self: flex-start;
+        flex-wrap: wrap;
+    }
 `
